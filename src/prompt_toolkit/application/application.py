@@ -735,7 +735,9 @@ class Application(Generic[_AppResult]):
                 read_from_input_in_context
             ), attach_winch_signal_handler(self._on_resize):
                 # Draw UI.
-                self._request_absolute_cursor_position()
+
+                #Commenting out this line below somehow fixes the issue
+                #self._request_absolute_cursor_position()
                 self._redraw()
                 self._start_auto_refresh_task()
 
